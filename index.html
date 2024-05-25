@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cicák</title>
+    <style>
+        body{
+            background-color:  lightgray; 
+        }
+
+        #kozep{
+            margin: auto;
+            width: 95%;
+            padding: 5px;
+        }
+
+        .hatter{
+            background-color: white;
+            border: 1px solid lightgray;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        h2{
+            margin: 2px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        p{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        img{
+            width: 100%; height: auto;
+        }
+
+        .jobb{
+            display: none;
+        }
+
+        .bal,.kozep,.jobb{
+            width: 100%;
+        }
+
+        .sorok{
+            display: flex;
+        }
+
+        @media (min-width: 700px) {
+
+            #kozep{
+                display: flex;
+            }
+
+            .hatter{
+                float: left;
+            }
+
+            .bal,.kozep{
+                width: 50%; margin: 5px;
+            }
+
+        }
+
+        @media (min-width: 1400px) {
+
+            .jobb{
+                display: block;
+            }
+
+            .bal, .kozep, .jobb{
+                width: 33%; margin: 5px;
+            }
+
+            .jobb img{
+                object-fit: contain;
+                width: 48%; height: auto;
+                margin: 5px;
+            }
+
+        }
+    </style>
+
+    <script>
+        function meretez() {
+            document.querySelector("title").innerHTML = "Cicák (" + document.documentElement.clientWidth + " px)";
+        }
+    </script>
+
+</head>
+<body onload="meretez();" onresize="meretez();">
+    <div id="kozep">
+        <div class="bal hatter">
+            <h2>Legújabb hírek</h2>
+            <div>
+                <img src="cica1.jpg">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis nulla minima architecto illo id voluptatibus necessitatibus dignissimos deserunt provident sed natus voluptatem quis quod laudantium, officia quisquam tenetur quidem dolore.</p>
+            </div>
+            <div>
+                <img src="cica2.jpg">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae impedit ipsum ipsam et saepe est veniam distinctio harum unde, labore sed quo perspiciatis, aliquid, rerum fugiat tenetur cumque. Voluptate, velit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi distinctio quas exercitationem totam mollitia officia, libero culpa eligendi nesciunt rem? Voluptate laboriosam doloremque perferendis cum eligendi molestias beatae architecto maiores.</p>
+            </div>
+        </div>
+        <div class="kozep hatter">
+            <h2>További hírek</h2>
+            <div>
+                <img src="cica3.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, culpa? Blanditiis sint voluptatem eligendi tempore consectetur quos, sit libero alias. Suscipit nobis obcaecati soluta eius dicta cupiditate dolor neque quas?</p>
+            </div>
+            <div>
+                <img src="cica4.jpg">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae porro minus odio adipisci in rem animi maxime, unde atque aperiam eum inventore dignissimos molestiae ex, consequuntur et quae. Nobis, ex!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam quidem doloribus odio incidunt, recusandae blanditiis, maiores repudiandae voluptatem error aliquam consequatur. Delectus nulla doloremque tempora nemo magni recusandae totam vero?</p>
+            </div>
+        </div>
+        <div class="jobb hatter">
+            <h2>Képek</h2>
+            <div class="sorok">
+                <img src="cica5.jpg">
+                <img src="cica6.jpg">
+            </div>
+            <div class="sorok">
+                <img src="cica7.jpg">
+                <img src="cica8.jpg">                                             
+            </div>
+            <div class="sorok">
+                <img src="cica9.jpg">
+                <img src="cica10.jpg">
+            </div>
+            <div class="sorok">
+                <img src="cica11.jpg">
+                <img src="cica12.jpg">
+            </div>
+            <div class="sorok">
+                <img src="cica13.jpg">
+                <img src="cica14.jpg">
+            </div>
+        </div>  
+</div>
+</body>
+</html>
